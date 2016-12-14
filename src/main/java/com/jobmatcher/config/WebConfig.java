@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan("com.javacodegeeks.examples")
+@ComponentScan("com.jobmatcher")
 public class WebConfig extends WebMvcConfigurerAdapter{
 
     @Override

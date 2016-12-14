@@ -22,11 +22,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="spring-angularjs-tutorial" />
+        <module name="Jobs-Matcher" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="spring-angularjs-tutorial" target="1.8" />
+      <module name="Jobs-Matcher" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

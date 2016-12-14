@@ -1,0 +1,7 @@
+com\jobmatcher\controller\MainController.class
+com\jobmatcher\model\User.class
+com\jobmatcher\repository\JobRepository.class
+com\jobmatcher\WebAppInitializer.class
+com\jobmatcher\repository\Impl\JobRepositoryImpl.class
+com\jobmatcher\config\WebConfig.class
+com\jobmatcher\model\Job.class
