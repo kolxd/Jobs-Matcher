@@ -1,32 +1,37 @@
 package com.jobmatcher;
 
-import org.springframework.web.WebApplicationInitializer;
-import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
-import org.springframework.web.servlet.DispatcherServlet;
+import com.jobmatcher.service.UploadService;
+import javafx.application.Application;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.web.SpringBootServletInitializer;
+import org.springframework.context.annotation.Bean;
+import org.springframework.util.FileSystemUtils;
 
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRegistration;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
-public class WebAppInitializer implements WebApplicationInitializer {
+@SpringBootApplication
+public class WebAppInitializer extends SpringBootServletInitializer {
 
-    private static final String CONFIG_LOCATION = "com.jobmatcher.config";
+@Override
+protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(Application.class);
+        }
 
-    @Override
-    public void onStartup(ServletContext servletContext) throws ServletException {
+public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+        }
 
-        System.out.println("***** Initializing Application for " + servletContext.getServerInfo() + " *****");
+@Bean
+CommandLineRunner init() {
+        return (args) -> {
+        FileSystemUtils.deleteRecursively(new File(UploadService.PATH));
 
-        // Create ApplicationContext
-        AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext();
-        applicationContext.setConfigLocation(CONFIG_LOCATION);
-
-        // Add the servlet mapping manually and make it initialize automatically
-        DispatcherServlet dispatcherServlet = new DispatcherServlet(applicationContext);
-        ServletRegistration.Dynamic servlet = servletContext.addServlet("mvc-dispatcher", dispatcherServlet);
-
-        servlet.addMapping("/");
-        servlet.setAsyncSupported(true);
-        servlet.setLoadOnStartup(1);
-    }
-}
+        Files.createDirectory(Paths.get(UploadService.PATH));
+        };
+        }
+        }
