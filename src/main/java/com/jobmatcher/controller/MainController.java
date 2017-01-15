@@ -8,14 +8,13 @@ import org.springframework.web.bind.annotation.*;
 
 
 @Controller
-@RequestMapping(value = "/app")
 public class MainController {
     /**
      * Starting page
      *
      * @return the path to main page
      */
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public String homepage() {
         return "index.html";
     }

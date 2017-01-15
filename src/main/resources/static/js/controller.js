@@ -4,7 +4,7 @@ app.controller('linkedinController', ['$scope', '$http', '$location', '$route', 
     $scope.uploadFile = function () {
         $scope.change();
         var file = $scope.myFile;
-        var uploadUrl = "/app/upload1";
+        var uploadUrl = "/upload1";
         if (file != null) {
             var fd = new FormData();
             fd.append('file', file);
@@ -31,7 +31,7 @@ app.controller('curriculumController', ['$scope', '$http', '$location', '$route'
     $scope.uploadFile = function () {
         $scope.change();
         var file = $scope.myFile;
-        var uploadUrl = "/app/upload2";
+        var uploadUrl = "/upload2";
         if (file != null) {
             var fd = new FormData();
             fd.append('file', file);
