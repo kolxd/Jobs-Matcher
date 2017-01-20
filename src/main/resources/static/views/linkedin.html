@@ -2,13 +2,14 @@
 <body ng-controller="linkedinController" ng-cloak>
 <div class="section">
     <h3>{{headingTitle}}</h3>
-    <div ng-controller = "myCtrl">
-        <input type = "file" file-model = "myFile"/>
-        <button ng-click = "uploadFile()">upload me</button>
-    </div>
+
+    <form class="form" name="myForm">
+        <input id="file" type="file" file-model="myFile" placeholder="Choose file" ng-click="change()"/>
+        <button id="upload" class="button" ng-click="uploadFile()">Upload</button>
+    </form>
 
     <div class="linkedin-section">
-        <img class="photo" src="./resources/static/images/linkedin.jpg"/>
+        <img class="photo" src="../images/linkedin.jpg"/>
     </div>
 </div>
 </body>

@@ -13,8 +13,9 @@ public class Application extends SpringBootServletInitializer {
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
         return application.sources(Application.class);
     }
-    public static void main(String[] args) {
+    public static void main(String[] argus) {
 
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(Application.class, argus);
+
     }
 }

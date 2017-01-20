@@ -2,15 +2,15 @@ var app = angular.module('app', ['ngRoute','ngResource']);
 app.config(function($routeProvider){
     $routeProvider
         .when('/linkedin',{
-            templateUrl: 'resources/static/views/linkedin.html',
+            templateUrl: 'views/linkedin.html',
             controller: 'linkedinController'
         })
         .when('/curriculumvitae',{
-            templateUrl: 'resources/static/views/curriculum.html',
+            templateUrl: 'views/curriculum.html',
             controller: 'curriculumController'
         })
         .when('/contactus',{
-            templateUrl: 'resources/static/views/contactus.html',
+            templateUrl: 'views/contactus.html',
             controller: 'contactusController'
         })
         .otherwise(
