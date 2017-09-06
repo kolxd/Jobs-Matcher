@@ -1,4 +1,4 @@
-package com.jobmatcher.service;
+package com.jobmatcher.Service;
 
 /**
  * Created by gevlad on 08-Jan-17.

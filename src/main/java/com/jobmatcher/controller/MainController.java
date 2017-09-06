@@ -1,6 +1,6 @@
 package com.jobmatcher.controller;
 
-import com.jobmatcher.service.MainService;
+import com.jobmatcher.Service.MainService;
 import com.jobmatcher.service.UploadCVService;
 import com.jobmatcher.service.UploadLinkedinService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 
-@Controller
+@Controller 
 public class MainController {
 
     @Autowired

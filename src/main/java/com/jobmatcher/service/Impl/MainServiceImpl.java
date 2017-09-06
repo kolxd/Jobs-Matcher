@@ -1,7 +1,7 @@
 package com.jobmatcher.service.Impl;
 
 import com.jobmatcher.utility.Impl.CVParser;
-import com.jobmatcher.service.MainService;
+import com.jobmatcher.Service.MainService;
 import com.jobmatcher.service.UploadCVService;
 import com.jobmatcher.service.UploadLinkedinService;
 import com.jobmatcher.utility.Impl.LinkedinParser;
@@ -33,7 +33,7 @@ import static org.springframework.http.HttpHeaders.USER_AGENT;
  * Created by gevlad on 08-Jan-17.
  */
 @Service
-public class MainServiceImpl implements MainService {
+public class MainServiceImpl implements com.jobmatcher.Service.MainService {
 
     @Autowired
     UploadCVService uploadCVService;
