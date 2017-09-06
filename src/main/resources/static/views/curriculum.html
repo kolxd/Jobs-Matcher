@@ -1,14 +1,19 @@
 <html lang="en" ng-app="app" class="no-js" ng-cloak>
 <body ng-controller="curriculumController" ng-cloak>
 <div class="section">
-    <h3>{{headingTitle}}</h3>
+    <!-- <h3>{{headingTitle}}</h3> -->
 
-    <form class="form" name="myForm">
-        <input id="file" type="file" file-model="myFile" placeholder="Choose file" ng-click="change()"/>
-        <button id="upload" class="button" ng-click="uploadFile()">Upload</button>
+    <form class="form top-buffer text-center" name="myForm">
+        <div class="btn-group"><!-- 
+        	<a href="#" class="btn btn-default">Action 1</a>
+            <a href="#" class="btn btn-default">Action 2</a> -->
+            <label class="btn btn-primary"> Browse <input type="file" style="display: none;"> </label><!-- 
+	        <input id="file" type="file" file-model="myFile" placeholder="Choose file" ng-click="change()" class="btn btn-default"/> -->
+	        <button id="upload" class="btn btn-default" ng-click="uploadFile()">Upload</button>
+        </div>
     </form>
 
-    <div class="curriculum-section">
+    <div class="curriculum-section top-buffer ">
         <img class="photo" src="../images/curriculum.jpg"/>
     </div>
 </div>
